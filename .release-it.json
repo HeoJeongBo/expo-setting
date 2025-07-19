@@ -1,0 +1,68 @@
+{
+  "github": {
+    "release": true,
+    "releaseName": "Release ${version}",
+    "releaseNotes": "generateNotes"
+  },
+  "npm": {
+    "publish": true,
+    "access": "public"
+  },
+  "git": {
+    "commitMessage": "chore: release ${version}",
+    "tagName": "v${version}",
+    "push": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md",
+      "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n",
+      "types": [
+        {
+          "type": "feat",
+          "section": "✨ Features"
+        },
+        {
+          "type": "fix",
+          "section": "🐛 Bug Fixes"
+        },
+        {
+          "type": "docs",
+          "section": "📚 Documentation"
+        },
+        {
+          "type": "style",
+          "section": "💄 Styles"
+        },
+        {
+          "type": "refactor",
+          "section": "♻️ Code Refactoring"
+        },
+        {
+          "type": "perf",
+          "section": "⚡ Performance Improvements"
+        },
+        {
+          "type": "test",
+          "section": "✅ Tests"
+        },
+        {
+          "type": "build",
+          "section": "📦 Build System"
+        },
+        {
+          "type": "ci",
+          "section": "👷 CI Configuration"
+        },
+        {
+          "type": "chore",
+          "section": "🔧 Chores"
+        }
+      ]
+    }
+  },
+  "hooks": {
+    "before:init": "npm run build"
+  }
+} 

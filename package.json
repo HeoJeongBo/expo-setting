@@ -1,7 +1,7 @@
 {
-  "name": "expo-settings",
+  "name": "@heojeongbo/expo-settings",
   "version": "0.1.0",
-  "description": "My new module",
+  "description": "Expo Settings module for React Native applications",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -13,7 +13,11 @@
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "open:ios": "xed example/ios",
-    "open:android": "open -a \"Android Studio\" example/android"
+    "open:android": "open -a \"Android Studio\" example/android",
+    "release": "release-it",
+    "release:patch": "release-it patch",
+    "release:minor": "release-it minor",
+    "release:major": "release-it major"
   },
   "keywords": [
     "react-native",
@@ -28,12 +32,13 @@
   "author": "heojeongbo <heojungbo@gmail.com> (https://github.com/HeoJeongBo)",
   "license": "MIT",
   "homepage": "https://github.com/HeoJeongBo/expo-settings#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.1",
     "@types/react": "~19.0.0",
-    "expo-module-scripts": "^4.1.9",
     "expo": "~53.0.0",
-    "react-native": "0.79.1"
+    "expo-module-scripts": "^4.1.9",
+    "react-native": "0.79.1",
+    "release-it": "^19.0.4"
   },
   "peerDependencies": {
     "expo": "*",
