@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { ExpoSettingsViewProps } from './ExpoSettings.types';
+import { ExpoSettingsViewProps } from './ExpoSettings.types'
 
 export default function ExpoSettingsView(props: ExpoSettingsViewProps) {
   return (
@@ -11,5 +11,5 @@ export default function ExpoSettingsView(props: ExpoSettingsViewProps) {
         onLoad={() => props.onLoad({ nativeEvent: { url: props.url } })}
       />
     </div>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import { useEvent } from 'expo';
-import ExpoSettings, { ExpoSettingsView } from 'expo-settings';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { useEvent } from 'expo'
+import ExpoSettings, { ExpoSettingsView } from 'expo-settings'
+import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native'
 
 export default function App() {
-  const onChangePayload = useEvent(ExpoSettings, 'onChange');
+  const onChangePayload = useEvent(ExpoSettings, 'onChange')
 
   return (
     <SafeAreaView style={styles.container}>
@@ -19,7 +19,7 @@ export default function App() {
           <Button
             title="Set value"
             onPress={async () => {
-              await ExpoSettings.setValueAsync('Hello from JS!');
+              await ExpoSettings.setValueAsync('Hello from JS!')
             }}
           />
         </Group>
@@ -35,7 +35,7 @@ export default function App() {
         </Group>
       </ScrollView>
     </SafeAreaView>
-  );
+  )
 }
 
 function Group(props: { name: string; children: React.ReactNode }) {
@@ -44,7 +44,7 @@ function Group(props: { name: string; children: React.ReactNode }) {
       <Text style={styles.groupHeader}>{props.name}</Text>
       {props.children}
     </View>
-  );
+  )
 }
 
 const styles = {
@@ -70,4 +70,4 @@ const styles = {
     flex: 1,
     height: 200,
   },
-};
+}

@@ -7,7 +7,11 @@
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
-    "lint": "expo-module lint",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "check": "biome check .",
     "test": "expo-module test",
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
@@ -33,6 +37,7 @@
   "license": "MIT",
   "homepage": "https://github.com/HeoJeongBo/expo-settings#readme",
   "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
     "@release-it/conventional-changelog": "^10.0.1",
     "@types/react": "~19.0.0",
     "expo": "~53.0.0",

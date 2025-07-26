@@ -1,11 +1,11 @@
-import { requireNativeView } from 'expo';
-import * as React from 'react';
+import { requireNativeView } from 'expo'
+import * as React from 'react'
 
-import { ExpoSettingsViewProps } from './ExpoSettings.types';
+import { ExpoSettingsViewProps } from './ExpoSettings.types'
 
 const NativeView: React.ComponentType<ExpoSettingsViewProps> =
-  requireNativeView('ExpoSettings');
+  requireNativeView('ExpoSettings')
 
 export default function ExpoSettingsView(props: ExpoSettingsViewProps) {
-  return <NativeView {...props} />;
+  return <NativeView {...props} />
 }

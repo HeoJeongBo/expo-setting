@@ -1,15 +1,15 @@
-import { registerWebModule, NativeModule } from 'expo';
+import { registerWebModule, NativeModule } from 'expo'
 
-import { ExpoSettingsModuleEvents } from './ExpoSettings.types';
+import { ExpoSettingsModuleEvents } from './ExpoSettings.types'
 
 class ExpoSettingsModule extends NativeModule<ExpoSettingsModuleEvents> {
-  PI = Math.PI;
+  PI = Math.PI
   async setValueAsync(value: string): Promise<void> {
-    this.emit('onChange', { value });
+    this.emit('onChange', { value })
   }
   hello() {
-    return 'Hello world! 👋';
+    return 'Hello world! 👋'
   }
 }
 
-export default registerWebModule(ExpoSettingsModule, 'ExpoSettingsModule');
+export default registerWebModule(ExpoSettingsModule, 'ExpoSettingsModule')
