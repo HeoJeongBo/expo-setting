@@ -1,8 +1,7 @@
 {
   "github": {
     "release": true,
-    "releaseName": "Release ${version}",
-    "releaseNotes": "generateNotes"
+    "releaseName": "Release ${version}"
   },
   "npm": {
     "publish": true,
@@ -63,6 +62,6 @@
     }
   },
   "hooks": {
-    "before:init": "npm run build"
+    "before:init": "bun run build"
   }
 } 
