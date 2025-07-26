@@ -1,6 +1,6 @@
 {
   "name": "@heojeongbo/expo-settings",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Expo Settings module for React Native applications",
   "main": "build/index.js",
   "types": "build/index.d.ts",
